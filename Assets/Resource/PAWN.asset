@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa596bd38dda04844a415e993ab009da, type: 3}
+  m_Name: PAWN
+  m_EditorClassIdentifier: 
+  pieceType: 0
+  pieceName: 
+  description: 
+  prefab:
+  - {fileID: 3726000552084305700, guid: 9d2f978349150534e944b7b4d5d414b8, type: 3}
+  - {fileID: 1597217221200186272, guid: 2c1166a17887e2443a77b848cc9deb25, type: 3}

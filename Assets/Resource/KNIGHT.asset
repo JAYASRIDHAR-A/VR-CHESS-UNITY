@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa596bd38dda04844a415e993ab009da, type: 3}
+  m_Name: KNIGHT
+  m_EditorClassIdentifier: 
+  pieceType: 0
+  pieceName: 
+  description: 
+  prefab:
+  - {fileID: 5535878787328834991, guid: 1bfc8c43fe026804d9e25fb1badaba5c, type: 3}
+  - {fileID: 7438035042348680274, guid: 7940fd9a8a5696d47b9e50cb27e03ff3, type: 3}
