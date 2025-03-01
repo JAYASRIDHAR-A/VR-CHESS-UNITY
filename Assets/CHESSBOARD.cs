@@ -60,7 +60,12 @@ public class CHESSBOARD : MonoBehaviour
                 fen += "/";
             }
         }
+
         print(fen);
+    }
+    public void UpdateFen() 
+    {
+
     }
     private string GetPGNSymbol(ChessPieceType type)
     {
