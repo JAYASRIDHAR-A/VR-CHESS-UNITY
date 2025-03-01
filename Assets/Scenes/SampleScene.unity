@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &69926350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &120977812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &128622310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &153004548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 3
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &180810099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &202203741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &273010688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 1
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &382855895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 2
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 2
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &425135187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,87 +402,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e1e3b3876a62b4e9dfccb7b5db862f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chessBoardBoxmanagers:
+  chessBoardBoxes:
   - columns:
     - {fileID: 430389568}
-    - {fileID: 382855895}
-    - {fileID: 696207965}
-    - {fileID: 1378168648}
-    - {fileID: 1757641024}
-    - {fileID: 2052389190}
-    - {fileID: 1138428486}
-    - {fileID: 1661449879}
-  - columns:
     - {fileID: 430389567}
-    - {fileID: 202203741}
-    - {fileID: 1274481715}
-    - {fileID: 69926350}
-    - {fileID: 120977812}
-    - {fileID: 1733042324}
-    - {fileID: 442046268}
-    - {fileID: 2137850920}
-  - columns:
     - {fileID: 430389566}
-    - {fileID: 830296168}
-    - {fileID: 1931829608}
-    - {fileID: 1917952148}
-    - {fileID: 802151971}
-    - {fileID: 1960924416}
-    - {fileID: 1892506615}
-    - {fileID: 1018355089}
-  - columns:
     - {fileID: 430389565}
-    - {fileID: 1474294303}
-    - {fileID: 573919979}
-    - {fileID: 559892471}
-    - {fileID: 2012817459}
-    - {fileID: 627205456}
-    - {fileID: 1438488104}
-    - {fileID: 1444252628}
-  - columns:
     - {fileID: 430389564}
-    - {fileID: 1505263572}
-    - {fileID: 1577557413}
-    - {fileID: 1551977224}
-    - {fileID: 1762709819}
-    - {fileID: 692492411}
-    - {fileID: 2062837236}
-    - {fileID: 1760461593}
-  - columns:
     - {fileID: 49012163}
-    - {fileID: 180810099}
-    - {fileID: 631486774}
-    - {fileID: 796606174}
-    - {fileID: 877887550}
-    - {fileID: 844377421}
-    - {fileID: 614063358}
-    - {fileID: 986655341}
-  - columns:
     - {fileID: 1695761590}
-    - {fileID: 2032401648}
-    - {fileID: 1983180467}
-    - {fileID: 128622310}
-    - {fileID: 849174137}
-    - {fileID: 1617307274}
-    - {fileID: 868405994}
-    - {fileID: 1673605510}
-  - columns:
     - {fileID: 1052159256}
+  - columns:
+    - {fileID: 382855895}
+    - {fileID: 202203741}
+    - {fileID: 830296168}
+    - {fileID: 1474294303}
+    - {fileID: 1505263572}
+    - {fileID: 180810099}
+    - {fileID: 2032401648}
     - {fileID: 559282067}
+  - columns:
+    - {fileID: 696207965}
+    - {fileID: 1274481715}
+    - {fileID: 1931829608}
+    - {fileID: 573919979}
+    - {fileID: 1577557413}
+    - {fileID: 631486774}
+    - {fileID: 1983180467}
     - {fileID: 153004548}
+  - columns:
+    - {fileID: 1378168648}
+    - {fileID: 69926350}
+    - {fileID: 1917952148}
+    - {fileID: 559892471}
+    - {fileID: 1551977224}
+    - {fileID: 796606174}
+    - {fileID: 128622310}
     - {fileID: 1455779035}
+  - columns:
+    - {fileID: 1757641024}
+    - {fileID: 120977812}
+    - {fileID: 802151971}
+    - {fileID: 2012817459}
+    - {fileID: 1762709819}
+    - {fileID: 877887550}
+    - {fileID: 849174137}
     - {fileID: 1286233017}
+  - columns:
+    - {fileID: 2052389190}
+    - {fileID: 1733042324}
+    - {fileID: 1960924416}
+    - {fileID: 627205456}
+    - {fileID: 692492411}
+    - {fileID: 844377421}
+    - {fileID: 1617307274}
     - {fileID: 2062473411}
+  - columns:
+    - {fileID: 1138428486}
+    - {fileID: 442046268}
+    - {fileID: 1892506615}
+    - {fileID: 1438488104}
+    - {fileID: 2062837236}
+    - {fileID: 614063358}
+    - {fileID: 868405994}
     - {fileID: 423021064}
+  - columns:
+    - {fileID: 1661449879}
+    - {fileID: 2137850920}
+    - {fileID: 1018355089}
+    - {fileID: 1444252628}
+    - {fileID: 1760461593}
+    - {fileID: 986655341}
+    - {fileID: 1673605510}
     - {fileID: 273010688}
   chessPieceSO:
-  - {fileID: 11400000, guid: 0c6a9fb5b91f4b546ae9ff766a4d83da, type: 2}
-  - {fileID: 11400000, guid: ab3d6297c1fce02459b78b9ec64ae8e7, type: 2}
-  - {fileID: 11400000, guid: 710799da6fd7f364f8974e36d0e61043, type: 2}
   - {fileID: 11400000, guid: 3953c18e6bdc4ea419b0302917865a81, type: 2}
-  - {fileID: 11400000, guid: 1862ba3014747ec42967f51a3847de4e, type: 2}
   - {fileID: 11400000, guid: 9c8751357448d4344b2e9883f299f59c, type: 2}
-  StockFish: {fileID: 543078045}
+  - {fileID: 11400000, guid: 710799da6fd7f364f8974e36d0e61043, type: 2}
+  - {fileID: 11400000, guid: 0c6a9fb5b91f4b546ae9ff766a4d83da, type: 2}
+  - {fileID: 11400000, guid: 1862ba3014747ec42967f51a3847de4e, type: 2}
+  - {fileID: 11400000, guid: ab3d6297c1fce02459b78b9ec64ae8e7, type: 2}
+  fen: 
 --- !u!1001 &430389498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &430389565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &430389566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &430389567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,7 +1746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &430389568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 1
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &442046268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1 &543078044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2120262821761188276, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 2
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &559892471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &573919979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &614063358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &627205456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &631486774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1 &641621601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &696207965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,7 +2019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 3
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &796606174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,7 +2034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &802151971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &830296168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,7 +2128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &849174137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &868405994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &877887550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,7 +2173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &986655341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1018355089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1052159256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2218,7 +2218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 1
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1138428486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 2
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1274481715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1286233017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 5
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1378168648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 4
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1438488104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1444252628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2308,7 +2308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1455779035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 4
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1474294303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1505263572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,7 +2353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1551977224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1577557413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2383,7 +2383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1617307274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1661449879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 1
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1673605510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1695761590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &1733042324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1757641024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 5
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1760461593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2488,7 +2488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1762709819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2503,7 +2503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1 &1789553307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1917952148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,7 +2639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1931829608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1960924416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,7 +2669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &1983180467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2684,7 +2684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &2012817459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2699,7 +2699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1001 &2016914145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2782,7 +2782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &2052389190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 3
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &2062473411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,7 +2812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 3
-  IsWhite: 0
+  pieceColor: 0
 --- !u!114 &2062837236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 6
-  IsWhite: 1
+  pieceColor: 1
 --- !u!114 &2137850920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chessBoard: {fileID: 425135187}
   chessPieceType: 0
-  IsWhite: 1
+  pieceColor: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

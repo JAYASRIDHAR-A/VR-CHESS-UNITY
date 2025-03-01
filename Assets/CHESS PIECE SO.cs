@@ -23,4 +23,9 @@ public enum ChessPieceType
     King,
     None
 }
+public enum ChessPieceColor 
+{
+    Black,
+    White
+}
 

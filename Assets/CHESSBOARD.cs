@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,95 +10,69 @@ public class Row
 
 public class CHESSBOARD : MonoBehaviour
 {
-    [SerializeField]
-    private List<Row> chessBoardBoxmanagers = new List<Row>();
+    [SerializeField] List<Row> chessBoardBoxes = null;
+    [SerializeField] CHESSPIECESO[] chessPieceSO = null;
+    [SerializeField] string fen = null;
 
-    public List<Row> ChessBoardBoxManagers => chessBoardBoxmanagers;
-
-    [SerializeField]
-    private CHESSPIECESO[] chessPieceSO = new CHESSPIECESO[8]; // Array initialized
-
-    public CHESSPIECESO[] ChessPieceSO => chessPieceSO;
-
-    [SerializeField] StockFish StockFish = null;
-
-    //public ChessPieceType GetPieceData(ChessPieceType type)
-    //{
-    //    return chessPieceDataArray[(int)type];
-    //}
-
-    public void Reset()
-    {
-        // Initialize an 8x8 grid
-        chessBoardBoxmanagers.Clear();
-        for (int i = 0; i < 8; i++)
-        {
-            var row = new Row();
-            for (int j = 0; j < 8; j++)
-            {
-                row.columns.Add(null);
-            }
-            chessBoardBoxmanagers.Add(row);
-        }
-    }
     private void Start()
     {
-        GenerateFEN();
+        FenGenerator();
     }
-    public string GenerateFEN()
+    public GameObject GetPiecePrefab(int pieceIndex,int colorIndex)
     {
-        string fen = "";
-
-        for (int row = 0; row < 8; row++)
+        if (pieceIndex < chessPieceSO.Length) 
+        {
+            return chessPieceSO[pieceIndex].prefab[colorIndex];
+        }
+        return null;
+    }
+    public void FenGenerator() 
+    {
+        for(int i = 0; i < 8; i++) 
         {
             int emptyCount = 0;
-            for (int col = 0; col < 8; col++)
+            for (int j = 0; j < 8; j++)
             {
-                var boxManager = chessBoardBoxmanagers[row].columns[col];
-                var piece = boxManager?.chessPieceType ?? ChessPieceType.None;
-
-                if (piece == ChessPieceType.None)
+                var pieceData = chessBoardBoxes[j].columns[i].GetPieceData();
+                if (pieceData.Item1 == ChessPieceType.None)
                 {
                     emptyCount++;
+                    continue;
                 }
-                else
-                {
-                    if (emptyCount > 0)
+                else {
+                    if (emptyCount != 0)
                     {
                         fen += emptyCount.ToString();
                         emptyCount = 0;
                     }
-                    // Add piece symbol
-                    string symbol = ChessPiecePGNMapper.GetPGNSymbol(piece);
+                    string symbol = GetPGNSymbol(pieceData.Item1);
+                    fen += pieceData.Item2 == ChessPieceColor.White ? symbol : symbol.ToLower();
 
-                    // Lowercase for black pieces, uppercase for white
-                    fen += (boxManager != null && boxManager.IsWhite) ? symbol.ToUpper() : symbol.ToLower();
                 }
             }
-
-            if (emptyCount > 0)
+            if (emptyCount != 0)
             {
                 fen += emptyCount.ToString();
+                emptyCount = 0;
             }
-
-            if (row < 7)
+            if (i < 7) 
             {
                 fen += "/";
             }
         }
-
-        fen += " w KQkq - 0 1";
         print(fen);
-        string bestmove = StockFish.GetBestMove(fen);
-        print(bestmove);
-        return fen;
     }
-    public GameObject GetPrefab(ChessPieceType type, bool pieceColor)
+    private string GetPGNSymbol(ChessPieceType type)
     {
-        if ((int)type < chessPieceSO.Length)
+        return type switch
         {
-            return chessPieceSO[(int)type].prefab[pieceColor ? 0 : 1];
-        }
-        return null;
+            ChessPieceType.King => "K",
+            ChessPieceType.Queen => "Q",
+            ChessPieceType.Rook => "R",
+            ChessPieceType.Bishop => "B",
+            ChessPieceType.Knight => "N",
+            ChessPieceType.Pawn => "P",
+            _ => ""
+        };
     }
 }
