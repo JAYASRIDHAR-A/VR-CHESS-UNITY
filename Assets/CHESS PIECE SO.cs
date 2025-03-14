@@ -28,4 +28,14 @@ public enum ChessPieceColor
     Black,
     White
 }
+public enum CastlingPiecePosition
+{
+    None,
+    WhiteKing,
+    BlackKing,
+    WhiteRookLeft,
+    WhiteRookRight,
+    BlackRookLeft,
+    BlackRookRight
+}
 

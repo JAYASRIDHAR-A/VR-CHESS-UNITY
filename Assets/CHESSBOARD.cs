@@ -10,12 +10,35 @@ public class Row
 
 public class CHESSBOARD : MonoBehaviour
 {
+    [SerializeField] ChessPieceColor playerToPlay = ChessPieceColor.White;
+    [SerializeField] StockFish stockFish = null;
     [SerializeField] List<Row> chessBoardBoxes = null;
     [SerializeField] CHESSPIECESO[] chessPieceSO = null;
     [SerializeField] string fen = null;
+    [SerializeField] string castlingRights=null;
+    [SerializeField] string enpassant = "-";
+    [SerializeField] int halfMove = 0;
+    [SerializeField] int fullMove = 1;
+    [SerializeField]
+    Dictionary<string, bool> movementFlags = new Dictionary<string, bool>
+{
+    { "WhiteKing", false }, // Tracks if the white king has moved
+    { "BlackKing", false }, // Tracks if the black king has moved
+    { "WhiteRookLeft", false }, // Tracks if the white rook on A1 has moved
+    { "WhiteRookRight", false }, // Tracks if the white rook on H1 has moved
+    { "BlackRookLeft", false }, // Tracks if the black rook on A8 has moved
+    { "BlackRookRight", false }  // Tracks if the black rook on H8 has moved
+};
 
     private void Start()
     {
+        UpdateCastlingRights();
+        FenGenerator();
+    }
+    public void NextPlayerTurn() 
+    {
+        if (playerToPlay == ChessPieceColor.Black) fullMove++;
+        playerToPlay =playerToPlay==ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
         FenGenerator();
     }
     public GameObject GetPiecePrefab(int pieceIndex,int colorIndex)
@@ -60,12 +83,45 @@ public class CHESSBOARD : MonoBehaviour
                 fen += "/";
             }
         }
-
+        fen += " " + playerToPlay.ToString()[0].ToString().ToLower() + " " + castlingRights + " " + enpassant + " " + halfMove + " " + fullMove;
         print(fen);
     }
-    public void UpdateFen() 
+    public void PiecePlaced() 
     {
+        FenGenerator();
+    }
+    public void PieceGrabbed() 
+    {
+        var pos = stockFish.GetPiecesWithLegalMoves(fen);
+        print(pos);
+    }
+    public void UpdateMovementFlag(string flag)
+    {
+        movementFlags[flag] = true;
+        UpdateCastlingRights();
+    }
+    private void UpdateCastlingRights()
+{
+    string castlingRights = "";
 
+    if (!movementFlags["WhiteKing"])
+    {
+        if (!movementFlags["WhiteRookRight"]) castlingRights += "K";
+        if (!movementFlags["WhiteRookLeft"]) castlingRights += "Q";
+    }
+
+    if (!movementFlags["BlackKing"])
+    {
+        if (!movementFlags["BlackRookLeft"]) castlingRights += "k";
+        if (!movementFlags["BlackRookRight"]) castlingRights += "q";
+    }
+
+    if (string.IsNullOrEmpty(castlingRights))
+    {
+        castlingRights = "-";
+    }
+        // Assign updated castling rights
+        this.castlingRights = castlingRights;
     }
     private string GetPGNSymbol(ChessPieceType type)
     {

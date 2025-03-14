@@ -5,7 +5,9 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
     [SerializeField] CHESSBOARD chessBoard = null;
     public ChessPieceType chessPieceType;
     public ChessPieceColor pieceColor = ChessPieceColor.White;
-
+    [SerializeField] CastlingPiecePosition castlingPiece = CastlingPiecePosition.None;
+    [SerializeField] bool isCastlingPiecePosition=false;
+    public PIECEMANAGER pieceInstance = null;
     private void Start()
     {
         SpawnPiece();
@@ -15,11 +17,16 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
     {
         if (chessPieceType == ChessPieceType.None) return;
         GameObject prefab = chessBoard.GetPiecePrefab((int)chessPieceType, (int)pieceColor);
-        GameObject pieceInstance = Instantiate(prefab,transform.position,Quaternion.identity,transform);
+        pieceInstance = Instantiate(prefab,transform.position,Quaternion.identity,transform).GetComponent<PIECEMANAGER>();
+        SetupPieceManager();
     }
-
+    public void SetupPieceManager() 
+    {
+        pieceInstance.SetUpPiece(castlingPiece,this.name);
+    }
     public (ChessPieceType,ChessPieceColor) GetPieceData() 
     {
         return (chessPieceType,pieceColor);
-    } 
+    }
+
 }

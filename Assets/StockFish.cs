@@ -2,81 +2,157 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class StockFish : MonoBehaviour
 {
-    private Process stockfishProcess;
+    private Process _stockfishProcess;
 
-    // Path to the Stockfish executable
-    private string stockfishPath = Application.dataPath + "/Stockfish/stockfish.exe";
-
+    [SerializeField]
+    private string _stockfishExecutablePath = "";
 
     void Start()
     {
-        StartStockfish();
+        if (string.IsNullOrEmpty(_stockfishExecutablePath))
+        {
+            _stockfishExecutablePath = Application.dataPath + "/Stockfish/stockfish.exe";
+        }
+
+        if (!File.Exists(_stockfishExecutablePath))
+        {
+            UnityEngine.Debug.LogError($"Stockfish executable not found at path: {_stockfishExecutablePath}");
+            return;
+        }
+
+        InitializeStockfish();
     }
 
     void OnDestroy()
     {
-        CloseStockfish();
+        TerminateStockfish();
     }
 
-    private void StartStockfish()
+    private void InitializeStockfish()
     {
-        stockfishProcess = new Process
+        _stockfishProcess = new Process
         {
             StartInfo = new ProcessStartInfo
             {
-                FileName = stockfishPath,
+                FileName = _stockfishExecutablePath,
                 UseShellExecute = false,
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
                 CreateNoWindow = true
             }
         };
-        stockfishProcess.Start();
+
+        try
+        {
+            _stockfishProcess.Start();
+            UnityEngine.Debug.Log("Stockfish started successfully.");
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError($"Failed to start Stockfish: {e.Message}");
+        }
     }
 
-    public string GetBestMove(string fen)
+    public List<Vector2Int> GetPiecesWithLegalMoves(string fen)
     {
-        if (stockfishProcess == null || stockfishProcess.HasExited)
+        if (_stockfishProcess == null || _stockfishProcess.HasExited)
         {
             UnityEngine.Debug.LogError("Stockfish is not running!");
             return null;
         }
 
-        // Send UCI commands to Stockfish
-        StreamWriter inputWriter = stockfishProcess.StandardInput;
-        StreamReader outputReader = stockfishProcess.StandardOutput;
+        StreamWriter inputWriter = _stockfishProcess.StandardInput;
+        StreamReader outputReader = _stockfishProcess.StandardOutput;
 
         inputWriter.WriteLine("uci");
         inputWriter.WriteLine($"position fen {fen}");
-        inputWriter.WriteLine("go depth 20"); // Adjust depth as needed
+        inputWriter.WriteLine("d");
 
         inputWriter.Flush();
 
-        // Read the best move from Stockfish's output
-        string bestMove = null;
-        while (true)
+        List<Vector2Int> piecesWithLegalMoves = new List<Vector2Int>();
+        string line;
+        while ((line = outputReader.ReadLine()) != null)
         {
-            string line = outputReader.ReadLine();
-            if (line.StartsWith("bestmove"))
+            if (line.StartsWith("Legal moves:"))
             {
-                bestMove = line.Split(' ')[1]; // Extract best move
+                string[] moves = line.Replace("Legal moves:", "").Trim().Split(' ');
+                foreach (string move in moves)
+                {
+                    string position = move.Substring(0, 2); // Extract the piece's position (e.g., "e2")
+                    Vector2Int gridPosition = ChessNotationToGrid(position);
+                    if (!piecesWithLegalMoves.Contains(gridPosition))
+                    {
+                        piecesWithLegalMoves.Add(gridPosition);
+                    }
+                }
                 break;
             }
         }
 
-        return bestMove;
+        return piecesWithLegalMoves;
     }
 
-    private void CloseStockfish()
+    public List<Vector2Int> GetLegalMovesForPiece(string fen, string piecePosition)
     {
-        if (stockfishProcess != null && !stockfishProcess.HasExited)
+        if (_stockfishProcess == null || _stockfishProcess.HasExited)
         {
-            stockfishProcess.StandardInput.WriteLine("quit");
-            stockfishProcess.WaitForExit();
-            stockfishProcess.Close();
+            UnityEngine.Debug.LogError("Stockfish is not running!");
+            return null;
+        }
+
+        StreamWriter inputWriter = _stockfishProcess.StandardInput;
+        StreamReader outputReader = _stockfishProcess.StandardOutput;
+
+        inputWriter.WriteLine("uci");
+        inputWriter.WriteLine($"position fen {fen}");
+        inputWriter.WriteLine("d");
+
+        inputWriter.Flush();
+
+        List<Vector2Int> legalMovesForPiece = new List<Vector2Int>();
+        string line;
+        while ((line = outputReader.ReadLine()) != null)
+        {
+            if (line.StartsWith("Legal moves:"))
+            {
+                string[] moves = line.Replace("Legal moves:", "").Trim().Split(' ');
+                foreach (string move in moves)
+                {
+                    if (move.StartsWith(piecePosition)) // Match moves starting with the piece's position
+                    {
+                        string targetPosition = move.Substring(2, 2); // Extract target position
+                        Vector2Int gridPosition = ChessNotationToGrid(targetPosition);
+                        legalMovesForPiece.Add(gridPosition);
+                    }
+                }
+                break;
+            }
+        }
+
+        return legalMovesForPiece;
+    }
+
+    private Vector2Int ChessNotationToGrid(string position)
+    {
+        if (position.Length != 2) return new Vector2Int(-1, -1);
+
+        int col = position[0] - 'a'; // Convert 'a' to 'h' into 0 to 7
+        int row = position[1] - '1'; // Convert '1' to '8' into 0 to 7 (bottom to top)
+        return new Vector2Int(row, col);
+    }
+
+    private void TerminateStockfish()
+    {
+        if (_stockfishProcess != null && !_stockfishProcess.HasExited)
+        {
+            _stockfishProcess.StandardInput.WriteLine("quit");
+            _stockfishProcess.WaitForExit();
+            _stockfishProcess.Close();
         }
     }
 }
