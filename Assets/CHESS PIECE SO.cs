@@ -10,7 +10,7 @@ public class CHESSPIECESO : ScriptableObject
     public string description;
 
     [Header("Piece Prefabs")]
-    public GameObject[] prefab= new GameObject[2];
+    public GameObject[] prefab = new GameObject[2];
 
 }
 public enum ChessPieceType

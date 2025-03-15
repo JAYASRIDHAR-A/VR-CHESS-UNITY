@@ -51,6 +51,7 @@ public class CHESSBOARD : MonoBehaviour
     }
     public void FenGenerator() 
     {
+        fen = "";
         for(int i = 0; i < 8; i++) 
         {
             int emptyCount = 0;
@@ -90,9 +91,9 @@ public class CHESSBOARD : MonoBehaviour
     {
         FenGenerator();
     }
-    public void PieceGrabbed() 
+    public void PieceGrabbed(string position) 
     {
-        var pos = stockFish.GetPiecesWithLegalMoves(fen);
+       var pos = stockFish.GetLegalMovesForPiece(fen,position);
         print(pos);
     }
     public void UpdateMovementFlag(string flag)

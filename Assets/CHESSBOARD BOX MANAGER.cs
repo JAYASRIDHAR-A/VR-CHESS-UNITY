@@ -20,6 +20,16 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
         pieceInstance = Instantiate(prefab,transform.position,Quaternion.identity,transform).GetComponent<PIECEMANAGER>();
         SetupPieceManager();
     }
+    public void PiecePlaced() 
+    {
+        print(this.name);
+        chessBoard.PiecePlaced();
+    }
+    public void PieceGrabbed() 
+    {
+        print("Exited");
+        chessBoard.PieceGrabbed(this.name);
+    }
     public void SetupPieceManager() 
     {
         pieceInstance.SetUpPiece(castlingPiece,this.name);
