@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CHESSBOARDBOXMANAGER : MonoBehaviour
 {
@@ -7,9 +8,11 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
     public ChessPieceColor pieceColor = ChessPieceColor.White;
     [SerializeField] CastlingPiecePosition castlingPiece = CastlingPiecePosition.None;
     [SerializeField] bool isCastlingPiecePosition=false;
+    [SerializeField] Highlighter highlighter = null;
     public PIECEMANAGER pieceInstance = null;
     private void Start()
     {
+        highlighter = GetComponent<Highlighter>();
         SpawnPiece();
     }
 
@@ -19,6 +22,10 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
         GameObject prefab = chessBoard.GetPiecePrefab((int)chessPieceType, (int)pieceColor);
         pieceInstance = Instantiate(prefab,transform.position,Quaternion.identity,transform).GetComponent<PIECEMANAGER>();
         SetupPieceManager();
+    }
+    public void ToggleHighlighter(bool state) 
+    {
+        highlighter.enabled = state;
     }
     public void PiecePlaced() 
     {

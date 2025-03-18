@@ -1,54 +1,47 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class StockFish : MonoBehaviour
 {
-    private Process _stockfishProcess;
+    private Process stockfishProcess;
+    private StreamWriter stockfishInput;
+    private StreamReader stockfishOutput;
 
-    [SerializeField]
-    private string _stockfishExecutablePath = "";
-
-    void Start()
+    private void Awake()
     {
-        if (string.IsNullOrEmpty(_stockfishExecutablePath))
-        {
-            _stockfishExecutablePath = Application.dataPath + "/Stockfish/stockfish.exe";
-        }
-
-        if (!File.Exists(_stockfishExecutablePath))
-        {
-            UnityEngine.Debug.LogError($"Stockfish executable not found at path: {_stockfishExecutablePath}");
-            return;
-        }
-
-        InitializeStockfish();
+        StartStockfish();
     }
 
-    void OnDestroy()
+    private void OnApplicationQuit()
     {
-        TerminateStockfish();
+        CloseStockfish();
     }
 
-    private void InitializeStockfish()
+    public void StartStockfish()
     {
-        _stockfishProcess = new Process
-        {
-            StartInfo = new ProcessStartInfo
-            {
-                FileName = _stockfishExecutablePath,
-                UseShellExecute = false,
-                RedirectStandardInput = true,
-                RedirectStandardOutput = true,
-                CreateNoWindow = true
-            }
-        };
+        string fileName = @"D:\GIT\VR-CHESS-UNITY\Assets\Stockfish\stockfish.exe";
 
         try
         {
-            _stockfishProcess.Start();
+            stockfishProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = fileName,
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                }
+            };
+            stockfishProcess.Start();
+            stockfishInput = stockfishProcess.StandardInput;
+            stockfishOutput = stockfishProcess.StandardOutput;
+
             UnityEngine.Debug.Log("Stockfish started successfully.");
         }
         catch (Exception e)
@@ -57,102 +50,224 @@ public class StockFish : MonoBehaviour
         }
     }
 
-    public List<Vector2Int> GetPiecesWithLegalMoves(string fen)
+    public void CloseStockfish()
     {
-        if (_stockfishProcess == null || _stockfishProcess.HasExited)
+        try
         {
-            UnityEngine.Debug.LogError("Stockfish is not running!");
-            return null;
+            stockfishInput?.Close();
+            stockfishOutput?.Close();
+            stockfishProcess?.Kill();
+            stockfishProcess?.Dispose();
+            UnityEngine.Debug.Log("Stockfish closed successfully.");
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError($"Error while closing Stockfish: {e.Message}");
+        }
+    }
+
+    public async Task<List<UnityEngine.Vector2Int>> GetPiecesWithLegalMoves(string fen)
+    {
+        SendCommand($"position fen {fen}");
+        SendCommand("go perft 1");
+
+        string response = await WaitForResponse();
+        if (string.IsNullOrEmpty(response))
+        {
+            UnityEngine.Debug.LogWarning("No response received from Stockfish.");
+            return new List<UnityEngine.Vector2Int>();  // Return empty List
         }
 
-        StreamWriter inputWriter = _stockfishProcess.StandardInput;
-        StreamReader outputReader = _stockfishProcess.StandardOutput;
+        var positions = ParsePerftOutput(response);
+        UnityEngine.Debug.Log($"Pieces with legal moves: {string.Join(", ", positions)}");
 
-        inputWriter.WriteLine("uci");
-        inputWriter.WriteLine($"position fen {fen}");
-        inputWriter.WriteLine("d");
+        // Convert HashSet to List before returning
+        return new List<UnityEngine.Vector2Int>(positions);
+    }
 
-        inputWriter.Flush();
+    // NEW METHOD: Get legal moves for a specific piece
+    public async Task<List<Move>> GetLegalMovesForPiece(string fen, Vector2Int piecePosition)
+    {
+        // Convert Vector2Int position to chess notation (e.g., (0,0) -> "a1")
+        string squareNotation = ConvertToSquareNotation(piecePosition);
 
-        List<Vector2Int> piecesWithLegalMoves = new List<Vector2Int>();
-        string line;
-        while ((line = outputReader.ReadLine()) != null)
+        // Get all legal moves in the position
+        SendCommand($"position fen {fen}");
+        SendCommand("go perft 1");
+
+        string response = await WaitForResponse();
+        if (string.IsNullOrEmpty(response))
         {
-            if (line.StartsWith("Legal moves:"))
+            UnityEngine.Debug.LogWarning("No response received from Stockfish.");
+            return new List<Move>();
+        }
+
+        // Parse only moves that start with the specified position
+        List<Move> legalMoves = ParseMovesForSquare(response, squareNotation);
+UnityEngine.Debug.Log($"Legal moves for piece at {squareNotation}: {string.Join(", ", legalMoves)}");
+
+        return legalMoves;
+    }
+
+    // Parse only moves that start with the specified square
+    private List<Move> ParseMovesForSquare(string response, string startSquare)
+    {
+        List<Move> moves = new List<Move>();
+        string[] lines = response.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (string line in lines)
+        {
+            if (line.Contains(":"))
             {
-                string[] moves = line.Replace("Legal moves:", "").Trim().Split(' ');
-                foreach (string move in moves)
+                string moveText = line.Split(':')[0].Trim(); // e.g., "a2a3"
+
+                // Check if this move starts with our target square
+                if (moveText.StartsWith(startSquare) && moveText.Length >= 4)
                 {
-                    string position = move.Substring(0, 2); // Extract the piece's position (e.g., "e2")
-                    Vector2Int gridPosition = ChessNotationToGrid(position);
-                    if (!piecesWithLegalMoves.Contains(gridPosition))
+                    // Parse the move
+                    string fromSquare = moveText.Substring(0, 2); // e.g., "a2"
+                    string toSquare = moveText.Substring(2, 2);   // e.g., "a3"
+
+                    // Check if it's a promotion move
+                    char? promotion = null;
+                    if (moveText.Length > 4)
                     {
-                        piecesWithLegalMoves.Add(gridPosition);
+                        promotion = moveText[4];
                     }
+
+                    // Create a Move object
+                    Move move = new Move
+                    {
+                        From = ConvertTo2DPosition(fromSquare),
+                        To = ConvertTo2DPosition(toSquare),
+                        FromNotation = fromSquare,
+                        ToNotation = toSquare,
+                        Promotion = promotion
+                    };
+
+                    moves.Add(move);
                 }
-                break;
             }
         }
 
-        return piecesWithLegalMoves;
+        return moves;
     }
 
-    public List<Vector2Int> GetLegalMovesForPiece(string fen, string piecePosition)
+    private void SendCommand(string command)
     {
-        if (_stockfishProcess == null || _stockfishProcess.HasExited)
+        try
         {
-            UnityEngine.Debug.LogError("Stockfish is not running!");
-            return null;
+            stockfishInput.WriteLine(command);
+            stockfishInput.Flush();
+            UnityEngine.Debug.Log($"Command sent to Stockfish: {command}");
+        }
+        catch (Exception e)
+        {
+            UnityEngine.Debug.LogError($"Failed to send command to Stockfish: {e.Message}");
+        }
+    }
+
+    private async Task<string> WaitForResponse()
+    {
+        string output = string.Empty;
+        string line;
+
+        UnityEngine.Debug.Log("Waiting for response from Stockfish...");
+        while ((line = await stockfishOutput.ReadLineAsync()) != null)
+        {
+            UnityEngine.Debug.Log($"Stockfish Output: {line}"); // Log each line from Stockfish
+            output += line + "\n";
+            if (line.StartsWith("Nodes searched")) // End of perft output
+                break;
         }
 
-        StreamWriter inputWriter = _stockfishProcess.StandardInput;
-        StreamReader outputReader = _stockfishProcess.StandardOutput;
-
-        inputWriter.WriteLine("uci");
-        inputWriter.WriteLine($"position fen {fen}");
-        inputWriter.WriteLine("d");
-
-        inputWriter.Flush();
-
-        List<Vector2Int> legalMovesForPiece = new List<Vector2Int>();
-        string line;
-        while ((line = outputReader.ReadLine()) != null)
+        if (string.IsNullOrEmpty(output))
         {
-            if (line.StartsWith("Legal moves:"))
+            UnityEngine.Debug.LogWarning("Stockfish response is empty.");
+        }
+
+        return output;
+    }
+
+    private HashSet<UnityEngine.Vector2Int> ParsePerftOutput(string response)
+    {
+        HashSet<UnityEngine.Vector2Int> positions = new HashSet<UnityEngine.Vector2Int>();
+        string[] lines = response.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (string line in lines)
+        {
+            if (line.Contains(":"))
             {
-                string[] moves = line.Replace("Legal moves:", "").Trim().Split(' ');
-                foreach (string move in moves)
+                string move = line.Split(':')[0].Trim(); // e.g., "a2a3"
+
+                // Only process valid chess squares (length should be at least 2 characters)
+                if (move.Length >= 2 && move[0] >= 'a' && move[0] <= 'h' && move[1] >= '1' && move[1] <= '8')
                 {
-                    if (move.StartsWith(piecePosition)) // Match moves starting with the piece's position
-                    {
-                        string targetPosition = move.Substring(2, 2); // Extract target position
-                        Vector2Int gridPosition = ChessNotationToGrid(targetPosition);
-                        legalMovesForPiece.Add(gridPosition);
-                    }
+                    // Convert to 2D position
+                    UnityEngine.Vector2Int position = ConvertTo2DPosition(move.Substring(0, 2)); // e.g., "a2"
+                    positions.Add(position);
                 }
-                break;
+                else
+                {
+                    UnityEngine.Debug.LogWarning($"Invalid move detected: {move}");
+                }
             }
         }
 
-        return legalMovesForPiece;
+        return positions;
     }
 
-    private Vector2Int ChessNotationToGrid(string position)
+    private bool IsValidSquare(string square)
     {
-        if (position.Length != 2) return new Vector2Int(-1, -1);
+        // Validate chess square (e.g., "a1" to "h8")
+        if (square.Length != 2) return false;
 
-        int col = position[0] - 'a'; // Convert 'a' to 'h' into 0 to 7
-        int row = position[1] - '1'; // Convert '1' to '8' into 0 to 7 (bottom to top)
-        return new Vector2Int(row, col);
+        char file = square[0]; // 'a' to 'h'
+        char rank = square[1]; // '1' to '8'
+
+        return file >= 'a' && file <= 'h' && rank >= '1' && rank <= '8';
     }
 
-    private void TerminateStockfish()
+    private UnityEngine.Vector2Int ConvertTo2DPosition(string square)
     {
-        if (_stockfishProcess != null && !_stockfishProcess.HasExited)
+        if (square.Length != 2 || square[0] < 'a' || square[0] > 'h' || square[1] < '1' || square[1] > '8')
         {
-            _stockfishProcess.StandardInput.WriteLine("quit");
-            _stockfishProcess.WaitForExit();
-            _stockfishProcess.Close();
+            throw new ArgumentException($"Invalid chess square: {square}");
         }
+
+        char file = square[0];
+        char rank = square[1];
+
+        int i = (rank - '0') - 1; // Convert rank to row (0-indexed, reversed)
+        int j = file - 'a';       // Convert file to column (0-indexed)
+
+        return new UnityEngine.Vector2Int(j, i); // Return as Vector2Int (x, y)
+    }
+
+    // NEW METHOD: Convert Vector2Int to chess notation
+    private string ConvertToSquareNotation(Vector2Int position)
+    {
+        char file = (char)('a' + position.x);
+        char rank = (char)('1' + position.y);
+        return $"{file}{rank}";
+    }
+}
+
+// NEW CLASS: Represents a chess move
+[System.Serializable]
+public class Move
+{
+    public Vector2Int From;
+    public Vector2Int To;
+    public string FromNotation;
+    public string ToNotation;
+    public char? Promotion;
+
+    public override string ToString()
+    {
+        if (Promotion.HasValue)
+            return $"{FromNotation}{ToNotation}{Promotion}";
+        else
+            return $"{FromNotation}{ToNotation}";
     }
 }

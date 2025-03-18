@@ -263,6 +263,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &69926350
 MonoBehaviour:
@@ -281,6 +282,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &120977812
 MonoBehaviour:
@@ -299,6 +301,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &128533914
 GameObject:
@@ -348,6 +351,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &153004548
 MonoBehaviour:
@@ -366,6 +370,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &162666643
 GameObject:
@@ -446,6 +451,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &192347770
 GameObject:
@@ -495,6 +501,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &266507880
 GameObject:
@@ -544,6 +551,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 5
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &290863544
 GameObject:
@@ -779,6 +787,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!1 &408310360
 GameObject:
@@ -977,6 +986,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &425135187
 MonoBehaviour:
@@ -991,7 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToPlay: 1
-  stockFish: {fileID: 0}
+  stockFish: {fileID: 543078045}
   chessBoardBoxes:
   - columns:
     - {fileID: 430389568}
@@ -1910,11 +1920,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2513281869145552563, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1425368692}
-    - targetCorrespondingSourceObject: {fileID: 2513281869145552563, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1425368693}
+      addedObject: {fileID: 1425368696}
     - targetCorrespondingSourceObject: {fileID: 4373458784801098524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -1930,11 +1936,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4373458784801098524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 430389590}
-    - targetCorrespondingSourceObject: {fileID: 4373458784801098524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 430389591}
+      addedObject: {fileID: 430389597}
     - targetCorrespondingSourceObject: {fileID: 5453997863758869510, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -1950,11 +1952,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5453997863758869510, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1505657161}
-    - targetCorrespondingSourceObject: {fileID: 5453997863758869510, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1505657162}
+      addedObject: {fileID: 1505657165}
     - targetCorrespondingSourceObject: {fileID: 3192388090248941991, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -1970,11 +1968,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3192388090248941991, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1726411246}
-    - targetCorrespondingSourceObject: {fileID: 3192388090248941991, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1726411247}
+      addedObject: {fileID: 1726411250}
     - targetCorrespondingSourceObject: {fileID: 8813888147396710176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -1990,11 +1984,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8813888147396710176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 430389587}
-    - targetCorrespondingSourceObject: {fileID: 8813888147396710176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 430389588}
+      addedObject: {fileID: 430389596}
     - targetCorrespondingSourceObject: {fileID: 7248136928658506205, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2010,11 +2000,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7248136928658506205, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 959363757}
-    - targetCorrespondingSourceObject: {fileID: 7248136928658506205, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 959363758}
+      addedObject: {fileID: 959363761}
     - targetCorrespondingSourceObject: {fileID: 244337001706902694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2030,11 +2016,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 244337001706902694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1695761603}
-    - targetCorrespondingSourceObject: {fileID: 244337001706902694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1695761604}
+      addedObject: {fileID: 1695761607}
     - targetCorrespondingSourceObject: {fileID: 5148941498559486089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2050,11 +2032,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5148941498559486089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1052159269}
-    - targetCorrespondingSourceObject: {fileID: 5148941498559486089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1052159270}
+      addedObject: {fileID: 1052159273}
     - targetCorrespondingSourceObject: {fileID: 1441842417016480554, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2070,11 +2048,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1441842417016480554, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1550255061}
-    - targetCorrespondingSourceObject: {fileID: 1441842417016480554, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1550255062}
+      addedObject: {fileID: 1550255065}
     - targetCorrespondingSourceObject: {fileID: 7613130108395108332, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2090,11 +2064,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7613130108395108332, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1622612621}
-    - targetCorrespondingSourceObject: {fileID: 7613130108395108332, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1622612622}
+      addedObject: {fileID: 1622612625}
     - targetCorrespondingSourceObject: {fileID: 8915468737078339343, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2110,11 +2080,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8915468737078339343, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 830296181}
-    - targetCorrespondingSourceObject: {fileID: 8915468737078339343, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 830296182}
+      addedObject: {fileID: 830296185}
     - targetCorrespondingSourceObject: {fileID: 5637213261952847358, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2130,11 +2096,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5637213261952847358, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1474294316}
-    - targetCorrespondingSourceObject: {fileID: 5637213261952847358, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1474294317}
+      addedObject: {fileID: 1474294320}
     - targetCorrespondingSourceObject: {fileID: 1222240894796340734, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2150,11 +2112,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1222240894796340734, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1505263585}
-    - targetCorrespondingSourceObject: {fileID: 1222240894796340734, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1505263586}
+      addedObject: {fileID: 1505263589}
     - targetCorrespondingSourceObject: {fileID: 5394666619107438955, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2170,11 +2128,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5394666619107438955, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 922585997}
-    - targetCorrespondingSourceObject: {fileID: 5394666619107438955, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 922585998}
+      addedObject: {fileID: 922586001}
     - targetCorrespondingSourceObject: {fileID: 4043120810614789286, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2190,11 +2144,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4043120810614789286, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2032401661}
-    - targetCorrespondingSourceObject: {fileID: 4043120810614789286, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2032401662}
+      addedObject: {fileID: 2032401665}
     - targetCorrespondingSourceObject: {fileID: 6853757090325906507, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2210,11 +2160,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6853757090325906507, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 559282080}
-    - targetCorrespondingSourceObject: {fileID: 6853757090325906507, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 559282081}
+      addedObject: {fileID: 559282084}
     - targetCorrespondingSourceObject: {fileID: 1015766100818549694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2230,11 +2176,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1015766100818549694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 696207978}
-    - targetCorrespondingSourceObject: {fileID: 1015766100818549694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 696207979}
+      addedObject: {fileID: 696207982}
     - targetCorrespondingSourceObject: {fileID: 3273523527349426215, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2250,11 +2192,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3273523527349426215, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1274481728}
-    - targetCorrespondingSourceObject: {fileID: 3273523527349426215, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1274481729}
+      addedObject: {fileID: 1274481732}
     - targetCorrespondingSourceObject: {fileID: 7591464401311075885, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2270,11 +2208,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7591464401311075885, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1931829621}
-    - targetCorrespondingSourceObject: {fileID: 7591464401311075885, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1931829622}
+      addedObject: {fileID: 1931829625}
     - targetCorrespondingSourceObject: {fileID: 6318160781598384532, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2290,11 +2224,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6318160781598384532, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 573919992}
-    - targetCorrespondingSourceObject: {fileID: 6318160781598384532, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 573919993}
+      addedObject: {fileID: 573919996}
     - targetCorrespondingSourceObject: {fileID: 3022187837968431281, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2310,11 +2240,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3022187837968431281, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1577557426}
-    - targetCorrespondingSourceObject: {fileID: 3022187837968431281, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1577557427}
+      addedObject: {fileID: 1577557430}
     - targetCorrespondingSourceObject: {fileID: 1045803100212338351, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2330,11 +2256,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1045803100212338351, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 631486787}
-    - targetCorrespondingSourceObject: {fileID: 1045803100212338351, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 631486788}
+      addedObject: {fileID: 631486791}
     - targetCorrespondingSourceObject: {fileID: 3665436281835372924, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2350,11 +2272,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3665436281835372924, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1983180480}
-    - targetCorrespondingSourceObject: {fileID: 3665436281835372924, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1983180481}
+      addedObject: {fileID: 1983180484}
     - targetCorrespondingSourceObject: {fileID: 2485098921813158019, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2370,11 +2288,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2485098921813158019, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1004261126}
-    - targetCorrespondingSourceObject: {fileID: 2485098921813158019, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1004261127}
+      addedObject: {fileID: 1004261130}
     - targetCorrespondingSourceObject: {fileID: 7989810368484967537, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2390,11 +2304,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7989810368484967537, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1378168661}
-    - targetCorrespondingSourceObject: {fileID: 7989810368484967537, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1378168662}
+      addedObject: {fileID: 1378168665}
     - targetCorrespondingSourceObject: {fileID: 7614357689006694636, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2410,11 +2320,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7614357689006694636, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 853655987}
-    - targetCorrespondingSourceObject: {fileID: 7614357689006694636, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 853655988}
+      addedObject: {fileID: 853655991}
     - targetCorrespondingSourceObject: {fileID: 1125775968444614020, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2430,11 +2336,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1125775968444614020, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1917952161}
-    - targetCorrespondingSourceObject: {fileID: 1125775968444614020, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1917952162}
+      addedObject: {fileID: 1917952165}
     - targetCorrespondingSourceObject: {fileID: 5840637213763508021, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2450,11 +2352,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5840637213763508021, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 559892484}
-    - targetCorrespondingSourceObject: {fileID: 5840637213763508021, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 559892485}
+      addedObject: {fileID: 559892488}
     - targetCorrespondingSourceObject: {fileID: 1002900298645804590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2470,11 +2368,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1002900298645804590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1551977237}
-    - targetCorrespondingSourceObject: {fileID: 1002900298645804590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1551977238}
+      addedObject: {fileID: 1551977241}
     - targetCorrespondingSourceObject: {fileID: 2735686700541255741, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2490,11 +2384,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2735686700541255741, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 796606187}
-    - targetCorrespondingSourceObject: {fileID: 2735686700541255741, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 796606188}
+      addedObject: {fileID: 796606191}
     - targetCorrespondingSourceObject: {fileID: 6050624835223151199, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2510,11 +2400,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6050624835223151199, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1195523024}
-    - targetCorrespondingSourceObject: {fileID: 6050624835223151199, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1195523025}
+      addedObject: {fileID: 1195523028}
     - targetCorrespondingSourceObject: {fileID: 6171423990303416410, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2530,11 +2416,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6171423990303416410, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1455779048}
-    - targetCorrespondingSourceObject: {fileID: 6171423990303416410, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1455779049}
+      addedObject: {fileID: 1455779052}
     - targetCorrespondingSourceObject: {fileID: 8539544893855554375, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2550,11 +2432,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8539544893855554375, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1757641037}
-    - targetCorrespondingSourceObject: {fileID: 8539544893855554375, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1757641038}
+      addedObject: {fileID: 1757641041}
     - targetCorrespondingSourceObject: {fileID: 3490460445091899228, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2570,11 +2448,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3490460445091899228, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 681878005}
-    - targetCorrespondingSourceObject: {fileID: 3490460445091899228, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 681878006}
+      addedObject: {fileID: 681878009}
     - targetCorrespondingSourceObject: {fileID: 4507660277534180214, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2590,11 +2464,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4507660277534180214, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 802151984}
-    - targetCorrespondingSourceObject: {fileID: 4507660277534180214, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 802151985}
+      addedObject: {fileID: 802151988}
     - targetCorrespondingSourceObject: {fileID: 879876692397750644, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2610,11 +2480,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 879876692397750644, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2012817472}
-    - targetCorrespondingSourceObject: {fileID: 879876692397750644, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2012817473}
+      addedObject: {fileID: 2012817476}
     - targetCorrespondingSourceObject: {fileID: 4880572916128061007, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2630,11 +2496,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4880572916128061007, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1762709832}
-    - targetCorrespondingSourceObject: {fileID: 4880572916128061007, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1762709833}
+      addedObject: {fileID: 1762709836}
     - targetCorrespondingSourceObject: {fileID: 2857723421405624295, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2650,11 +2512,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2857723421405624295, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 877887563}
-    - targetCorrespondingSourceObject: {fileID: 2857723421405624295, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 877887564}
+      addedObject: {fileID: 877887567}
     - targetCorrespondingSourceObject: {fileID: 6798876693947321132, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2670,11 +2528,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6798876693947321132, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 849174150}
-    - targetCorrespondingSourceObject: {fileID: 6798876693947321132, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 849174151}
+      addedObject: {fileID: 849174154}
     - targetCorrespondingSourceObject: {fileID: 2897698486000237779, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2690,11 +2544,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2897698486000237779, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1286233030}
-    - targetCorrespondingSourceObject: {fileID: 2897698486000237779, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1286233031}
+      addedObject: {fileID: 1286233034}
     - targetCorrespondingSourceObject: {fileID: 5506115957941479176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2710,11 +2560,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5506115957941479176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2052389203}
-    - targetCorrespondingSourceObject: {fileID: 5506115957941479176, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052389204}
+      addedObject: {fileID: 2052389207}
     - targetCorrespondingSourceObject: {fileID: 8542811741705893565, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2730,11 +2576,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8542811741705893565, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1733042337}
-    - targetCorrespondingSourceObject: {fileID: 8542811741705893565, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1733042338}
+      addedObject: {fileID: 1733042341}
     - targetCorrespondingSourceObject: {fileID: 8956300389084205805, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2750,11 +2592,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8956300389084205805, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1960924429}
-    - targetCorrespondingSourceObject: {fileID: 8956300389084205805, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1960924430}
+      addedObject: {fileID: 1960924433}
     - targetCorrespondingSourceObject: {fileID: 2841428252607337985, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2770,11 +2608,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2841428252607337985, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 627205469}
-    - targetCorrespondingSourceObject: {fileID: 2841428252607337985, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 627205470}
+      addedObject: {fileID: 627205473}
     - targetCorrespondingSourceObject: {fileID: 2945626558882596524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2790,11 +2624,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2945626558882596524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 692492424}
-    - targetCorrespondingSourceObject: {fileID: 2945626558882596524, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 692492425}
+      addedObject: {fileID: 692492428}
     - targetCorrespondingSourceObject: {fileID: 705146388785630694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2810,11 +2640,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 705146388785630694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 844377434}
-    - targetCorrespondingSourceObject: {fileID: 705146388785630694, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 844377435}
+      addedObject: {fileID: 844377438}
     - targetCorrespondingSourceObject: {fileID: 7776235771069081368, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2830,11 +2656,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7776235771069081368, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1617307287}
-    - targetCorrespondingSourceObject: {fileID: 7776235771069081368, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1617307288}
+      addedObject: {fileID: 1617307291}
     - targetCorrespondingSourceObject: {fileID: 2939335642191011280, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2850,11 +2672,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2939335642191011280, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2062473424}
-    - targetCorrespondingSourceObject: {fileID: 2939335642191011280, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2062473425}
+      addedObject: {fileID: 2062473428}
     - targetCorrespondingSourceObject: {fileID: 3843995181562912959, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2870,11 +2688,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3843995181562912959, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1138428499}
-    - targetCorrespondingSourceObject: {fileID: 3843995181562912959, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1138428500}
+      addedObject: {fileID: 1138428503}
     - targetCorrespondingSourceObject: {fileID: 5074263454102354503, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2890,11 +2704,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5074263454102354503, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 442046281}
-    - targetCorrespondingSourceObject: {fileID: 5074263454102354503, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 442046282}
+      addedObject: {fileID: 442046285}
     - targetCorrespondingSourceObject: {fileID: 73684633664337089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2910,11 +2720,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 73684633664337089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1892506628}
-    - targetCorrespondingSourceObject: {fileID: 73684633664337089, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1892506629}
+      addedObject: {fileID: 1892506632}
     - targetCorrespondingSourceObject: {fileID: 1367105887179336315, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2930,11 +2736,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1367105887179336315, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1438488117}
-    - targetCorrespondingSourceObject: {fileID: 1367105887179336315, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1438488118}
+      addedObject: {fileID: 1438488121}
     - targetCorrespondingSourceObject: {fileID: 4149934196453334693, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2950,11 +2752,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4149934196453334693, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2062837249}
-    - targetCorrespondingSourceObject: {fileID: 4149934196453334693, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2062837250}
+      addedObject: {fileID: 2062837253}
     - targetCorrespondingSourceObject: {fileID: 6690234319826095100, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2970,11 +2768,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6690234319826095100, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 614063371}
-    - targetCorrespondingSourceObject: {fileID: 6690234319826095100, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 614063372}
+      addedObject: {fileID: 614063375}
     - targetCorrespondingSourceObject: {fileID: 2987674731929679460, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -2990,11 +2784,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2987674731929679460, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 868406007}
-    - targetCorrespondingSourceObject: {fileID: 2987674731929679460, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 868406008}
+      addedObject: {fileID: 868406011}
     - targetCorrespondingSourceObject: {fileID: 5650110402658016590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3010,11 +2800,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5650110402658016590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 505602631}
-    - targetCorrespondingSourceObject: {fileID: 5650110402658016590, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 505602632}
+      addedObject: {fileID: 505602635}
     - targetCorrespondingSourceObject: {fileID: 1633282923274890027, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3030,11 +2816,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1633282923274890027, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1661449892}
-    - targetCorrespondingSourceObject: {fileID: 1633282923274890027, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1661449893}
+      addedObject: {fileID: 1661449896}
     - targetCorrespondingSourceObject: {fileID: 6670664449705893293, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3050,11 +2832,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6670664449705893293, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2137850933}
-    - targetCorrespondingSourceObject: {fileID: 6670664449705893293, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2137850934}
+      addedObject: {fileID: 2137850937}
     - targetCorrespondingSourceObject: {fileID: 1884258034559661467, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3070,11 +2848,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1884258034559661467, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1018355102}
-    - targetCorrespondingSourceObject: {fileID: 1884258034559661467, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1018355103}
+      addedObject: {fileID: 1018355106}
     - targetCorrespondingSourceObject: {fileID: 1323203585354049500, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3090,11 +2864,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1323203585354049500, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1444252641}
-    - targetCorrespondingSourceObject: {fileID: 1323203585354049500, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1444252642}
+      addedObject: {fileID: 1444252645}
     - targetCorrespondingSourceObject: {fileID: 2855907861704930915, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3110,11 +2880,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2855907861704930915, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1760461606}
-    - targetCorrespondingSourceObject: {fileID: 2855907861704930915, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1760461607}
+      addedObject: {fileID: 1760461610}
     - targetCorrespondingSourceObject: {fileID: 442967762721309270, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3130,11 +2896,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 442967762721309270, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 986655354}
-    - targetCorrespondingSourceObject: {fileID: 442967762721309270, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 986655355}
+      addedObject: {fileID: 986655358}
     - targetCorrespondingSourceObject: {fileID: 8385343738408737585, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3150,11 +2912,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8385343738408737585, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1673605523}
-    - targetCorrespondingSourceObject: {fileID: 8385343738408737585, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1673605524}
+      addedObject: {fileID: 1673605527}
     - targetCorrespondingSourceObject: {fileID: 7699766070759887383, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
@@ -3170,11 +2928,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7699766070759887383, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1329024073}
-    - targetCorrespondingSourceObject: {fileID: 7699766070759887383, guid: a578e7ad5ccdb25428494ebe93c5ddbe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1329024074}
+      addedObject: {fileID: 1329024077}
   m_SourcePrefab: {fileID: 100100000, guid: a578e7ad5ccdb25428494ebe93c5ddbe, type: 3}
 --- !u!1 &430389499 stripped
 GameObject:
@@ -3583,6 +3337,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &430389565
 MonoBehaviour:
@@ -3601,6 +3356,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &430389566
 MonoBehaviour:
@@ -3619,6 +3375,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &430389567
 MonoBehaviour:
@@ -3637,6 +3394,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!114 &430389568
 MonoBehaviour:
@@ -3655,6 +3413,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 3
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &430389577
 BoxCollider:
@@ -3772,30 +3531,8 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &430389587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &430389588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
 --- !u!114 &430389589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,30 +3595,34 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &430389590
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &430389596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430389559}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
+--- !u!114 &430389597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &430389591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &435302386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3930,6 +3671,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &442046273
 BoxCollider:
@@ -4020,30 +3762,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &442046281
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &442046285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &442046282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &468518564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,30 +3959,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &505602631
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &505602635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389508}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &505602632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &515223909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,7 +4054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d0990f494868249b8624200a882122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stockfishExecutablePath: 
 --- !u!114 &559282067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4348,6 +4071,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &559282072
 BoxCollider:
@@ -4438,30 +4162,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &559282080
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &559282084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &559282081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &559892471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4479,6 +4194,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &559892476
 BoxCollider:
@@ -4569,30 +4285,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &559892484
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &559892488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389536}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &559892485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &573919979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4610,6 +4317,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &573919984
 BoxCollider:
@@ -4700,30 +4408,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &573919992
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &573919996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &573919993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &574631430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,6 +4564,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &614063363
 BoxCollider:
@@ -4955,30 +4655,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &614063371
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &614063375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389510}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &614063372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &618034672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,6 +4718,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &627205461
 BoxCollider:
@@ -5117,30 +4809,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &627205469
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &627205473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389520}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &627205470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &628052173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,6 +4872,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &631486779
 BoxCollider:
@@ -5279,30 +4963,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &631486787
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &631486791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &631486788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &641621601
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,30 +5234,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &681878005
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &681878009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389530}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &681878006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &692492411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5600,6 +5266,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &692492416
 BoxCollider:
@@ -5690,30 +5357,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &692492424
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &692492428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &692492425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &696207965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5731,6 +5389,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &696207970
 BoxCollider:
@@ -5821,30 +5480,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &696207978
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &696207982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &696207979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &714400929
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,6 +5605,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &796606179
 BoxCollider:
@@ -6045,30 +5696,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &796606187
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &796606191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &796606188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &802151971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6086,6 +5728,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &802151976
 BoxCollider:
@@ -6176,30 +5819,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &802151984
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &802151988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &802151985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &821022536
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,6 +5882,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &830296173
 BoxCollider:
@@ -6338,30 +5973,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &830296181
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &830296185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &830296182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6459,6 +6085,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &844377426
 BoxCollider:
@@ -6549,30 +6176,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &844377434
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &844377438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &844377435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &849174137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6590,6 +6208,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &849174142
 BoxCollider:
@@ -6680,30 +6299,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &849174150
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &849174154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &849174151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &853655979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6793,30 +6403,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &853655987
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &853655991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &853655988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &868405994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6834,6 +6435,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &868405999
 BoxCollider:
@@ -6924,30 +6526,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &868406007
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &868406011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389509}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &868406008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &868445170
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,6 +6589,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &877887555
 BoxCollider:
@@ -7086,30 +6680,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &877887563
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &877887567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &877887564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &908338446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7261,30 +6846,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &922585997
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &922586001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &922585998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &959363749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7374,30 +6950,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &959363757
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &959363761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &959363758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &964138778
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,6 +7044,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &986655346
 BoxCollider:
@@ -7567,30 +7135,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &986655354
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &986655358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &986655355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &1004261118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7680,30 +7239,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1004261126
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1004261130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1004261127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1009585513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7752,6 +7302,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1018355094
 BoxCollider:
@@ -7842,30 +7393,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1018355102
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1018355106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389505}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1018355103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1052159256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7883,6 +7425,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 4
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1052159261
 BoxCollider:
@@ -7973,30 +7516,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1052159269
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1052159273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1052159270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1138428486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8014,6 +7548,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1138428491
 BoxCollider:
@@ -8104,30 +7639,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1138428499
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1138428503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389515}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1138428500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1169445480
 GameObject:
   m_ObjectHideFlags: 0
@@ -8248,30 +7774,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1195523024
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1195523028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1195523025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1206509328
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,6 +7930,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1274481720
 BoxCollider:
@@ -8503,30 +8021,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1274481728
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1274481732
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1274481729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1286233017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8544,6 +8053,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 2
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1286233022
 BoxCollider:
@@ -8634,30 +8144,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1286233030
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1286233034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1286233031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1308197014
 GameObject:
   m_ObjectHideFlags: 0
@@ -8778,30 +8279,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1329024073
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1329024077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1329024074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1358077013
 GameObject:
   m_ObjectHideFlags: 0
@@ -8850,6 +8342,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1378168653
 BoxCollider:
@@ -8940,30 +8433,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1378168661
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1378168665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389539}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1378168662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &1425368684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9053,30 +8537,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1425368692
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1425368696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1425368693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1438488104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,6 +8569,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1438488109
 BoxCollider:
@@ -9184,30 +8660,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1438488117
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1438488121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1438488118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1444252628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9225,6 +8692,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1444252633
 BoxCollider:
@@ -9315,30 +8783,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1444252641
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1444252645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1444252642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1451542608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9418,6 +8877,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1455779040
 BoxCollider:
@@ -9508,30 +8968,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1455779048
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1455779052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389532}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1455779049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1474294303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9549,6 +9000,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1474294308
 BoxCollider:
@@ -9639,30 +9091,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1474294316
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1474294320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1474294317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1505263572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9680,6 +9123,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1505263577
 BoxCollider:
@@ -9770,30 +9214,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1505263585
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1505263589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1505263586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &1505657153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9883,30 +9318,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1505657161
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1505657165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1505657162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &1550255053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9996,30 +9422,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1550255061
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1550255065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1550255062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1551977224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10037,6 +9454,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1551977229
 BoxCollider:
@@ -10127,30 +9545,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1551977237
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1551977241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1551977238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1569199323
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,6 +9608,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1577557418
 BoxCollider:
@@ -10289,30 +9699,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1577557426
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1577557430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1577557427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1617307274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10330,6 +9731,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1617307279
 BoxCollider:
@@ -10420,30 +9822,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1617307287
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1617307291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389517}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1617307288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1617351030
 GameObject:
   m_ObjectHideFlags: 0
@@ -10564,30 +9957,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1622612621
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1622612625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1622612622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1661449879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10605,6 +9989,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 4
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1661449884
 BoxCollider:
@@ -10695,30 +10080,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1661449892
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1661449896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389507}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1661449893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1668420144
 GameObject:
   m_ObjectHideFlags: 0
@@ -10767,6 +10143,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1673605515
 BoxCollider:
@@ -10857,30 +10234,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1673605523
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1673605527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1673605524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1695761590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10898,6 +10266,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1695761595
 BoxCollider:
@@ -10988,30 +10357,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1695761603
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1695761607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1695761604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!65 &1726411238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11101,30 +10461,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1726411246
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1726411250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389560}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1726411247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1733042324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11142,6 +10493,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1733042329
 BoxCollider:
@@ -11232,30 +10584,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1733042337
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1733042341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1733042338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1757641024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11273,6 +10616,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 1
   isCastlingPiecePosition: 1
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1757641029
 BoxCollider:
@@ -11363,30 +10707,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1757641037
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1757641041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1757641038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1760461593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11404,6 +10739,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1760461598
 BoxCollider:
@@ -11494,30 +10830,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1760461606
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1760461610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389503}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1760461607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1762709819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11535,6 +10862,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1762709824
 BoxCollider:
@@ -11625,30 +10953,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1762709832
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1762709836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389527}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1762709833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1789553307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11834,6 +11153,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1892506620
 BoxCollider:
@@ -11924,30 +11244,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1892506628
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1892506632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1892506629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1905211758
 GameObject:
   m_ObjectHideFlags: 0
@@ -11996,6 +11307,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1917952153
 BoxCollider:
@@ -12086,30 +11398,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1917952161
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1917952165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1917952162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &1931829608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12127,6 +11430,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1931829613
 BoxCollider:
@@ -12217,30 +11521,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1931829621
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1931829625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1931829622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1958475198
 GameObject:
   m_ObjectHideFlags: 0
@@ -12289,6 +11584,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1960924421
 BoxCollider:
@@ -12379,30 +11675,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1960924429
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1960924433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389521}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1960924430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &1970273473
 GameObject:
   m_ObjectHideFlags: 0
@@ -12482,6 +11769,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &1983180472
 BoxCollider:
@@ -12572,30 +11860,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1983180480
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &1983180484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1983180481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &2012817459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12613,6 +11892,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2012817464
 BoxCollider:
@@ -12703,30 +11983,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2012817472
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2012817476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389528}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2012817473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1001 &2016914145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12843,6 +12114,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2032401653
 BoxCollider:
@@ -12933,30 +12205,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2032401661
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2032401665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2032401662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &2052389190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12974,6 +12237,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2052389195
 BoxCollider:
@@ -13064,30 +12328,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2052389203
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2052389207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2052389204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &2062473411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13105,6 +12360,7 @@ MonoBehaviour:
   pieceColor: 0
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2062473416
 BoxCollider:
@@ -13195,30 +12451,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2062473424
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2062473428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2062473425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!114 &2062837236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13236,6 +12483,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2062837241
 BoxCollider:
@@ -13326,30 +12574,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2062837249
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2062837253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389511}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2062837250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1 &2091871716
 GameObject:
   m_ObjectHideFlags: 0
@@ -13429,6 +12668,7 @@ MonoBehaviour:
   pieceColor: 1
   castlingPiece: 0
   isCastlingPiecePosition: 0
+  highlighter: {fileID: 0}
   pieceInstance: {fileID: 0}
 --- !u!65 &2137850925
 BoxCollider:
@@ -13519,30 +12759,21 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &2137850933
+  chessBoardBoxManager: {fileID: 0}
+  eventCount: 0
+--- !u!114 &2137850937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430389506}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232b65283cc93114ea1e4817f51e0f7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 71def0a80456b954aa33d2a3ceffffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2137850934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430389506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d83a05481bc4704880f1920708456e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highlightColor: {r: 0.015686274, g: 1, b: 0.99697286, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

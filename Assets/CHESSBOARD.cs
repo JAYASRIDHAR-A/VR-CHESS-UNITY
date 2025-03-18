@@ -10,6 +10,7 @@ public class Row
 
 public class CHESSBOARD : MonoBehaviour
 {
+   // [SerializeField] bool GameStarted = false; 
     [SerializeField] ChessPieceColor playerToPlay = ChessPieceColor.White;
     [SerializeField] StockFish stockFish = null;
     [SerializeField] List<Row> chessBoardBoxes = null;
@@ -32,14 +33,28 @@ public class CHESSBOARD : MonoBehaviour
 
     private void Start()
     {
+
         UpdateCastlingRights();
         FenGenerator();
+
+        HighlightLegalPieces();
     }
     public void NextPlayerTurn() 
     {
         if (playerToPlay == ChessPieceColor.Black) fullMove++;
         playerToPlay =playerToPlay==ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
         FenGenerator();
+    }
+    async void HighlightLegalPieces()
+    {
+        //var legalPieces = stockFish.GetPiecesWithLegalMoves(fen);
+        var positions = await stockFish.GetPiecesWithLegalMoves(fen);
+        print(stockFish.GetLegalMovesForPiece(fen, new Vector2Int(6,0)));
+        foreach (Vector2Int move in positions)
+        {
+            //print(move.x+""+move.y);
+            chessBoardBoxes[move.x].columns[move.y].ToggleHighlighter(true);
+        }
     }
     public GameObject GetPiecePrefab(int pieceIndex,int colorIndex)
     {
@@ -49,52 +64,64 @@ public class CHESSBOARD : MonoBehaviour
         }
         return null;
     }
-    public void FenGenerator() 
+    public void FenGenerator()
     {
         fen = "";
-        for(int i = 0; i < 8; i++) 
+        for (int i = 7; i >= 0; i--) // Iterate over rows from top to bottom
         {
             int emptyCount = 0;
-            for (int j = 0; j < 8; j++)
+            for (int j = 0; j < 8; j++) // Iterate over columns left to right
             {
                 var pieceData = chessBoardBoxes[j].columns[i].GetPieceData();
                 if (pieceData.Item1 == ChessPieceType.None)
                 {
-                    emptyCount++;
+                    emptyCount++; // Count empty squares
                     continue;
                 }
-                else {
+                else
+                {
                     if (emptyCount != 0)
                     {
-                        fen += emptyCount.ToString();
+                        fen += emptyCount.ToString(); // Add empty square count
                         emptyCount = 0;
                     }
                     string symbol = GetPGNSymbol(pieceData.Item1);
-                    fen += pieceData.Item2 == ChessPieceColor.White ? symbol : symbol.ToLower();
-
+                    fen += pieceData.Item2 == ChessPieceColor.White ? symbol : symbol.ToLower(); // Append piece symbol
                 }
             }
             if (emptyCount != 0)
             {
-                fen += emptyCount.ToString();
-                emptyCount = 0;
+                fen += emptyCount.ToString(); // Add trailing empty square count
             }
-            if (i < 7) 
+            if (i > 0) // Add row separator if not the last row
             {
                 fen += "/";
             }
         }
-        fen += " " + playerToPlay.ToString()[0].ToString().ToLower() + " " + castlingRights + " " + enpassant + " " + halfMove + " " + fullMove;
-        print(fen);
+
+        // Append FEN metadata
+        fen += " " + playerToPlay.ToString()[0].ToString().ToLower() + " "; // Player to play
+        fen += string.IsNullOrEmpty(castlingRights) ? "-" : castlingRights; // Castling rights
+        fen += " " + (string.IsNullOrEmpty(enpassant) ? "-" : enpassant); // En passant
+        fen += " " + halfMove + " " + fullMove; // Halfmove and fullmove counters
+
+        print(fen); // Print the FEN string
     }
-    public void PiecePlaced() 
+
+
+//async void GetLegalPieces()
+//{
+//   await stockFish.GetLegalMoves(fen);
+//}
+
+public void PiecePlaced() 
     {
-        FenGenerator();
+        //FenGenerator();
     }
     public void PieceGrabbed(string position) 
     {
-       var pos = stockFish.GetLegalMovesForPiece(fen,position);
-        print(pos);
+        //var pos = stockFish.GetLegalMovesForPiece(fen, position);
+        //print(pos);
     }
     public void UpdateMovementFlag(string flag)
     {
