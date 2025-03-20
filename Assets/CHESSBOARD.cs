@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 [System.Serializable]
@@ -13,6 +15,7 @@ public class CHESSBOARD : MonoBehaviour
    // [SerializeField] bool GameStarted = false; 
     [SerializeField] ChessPieceColor playerToPlay = ChessPieceColor.White;
     [SerializeField] StockFish stockFish = null;
+    [SerializeField] public List<Vector2Int> legalPieces= null ;
     [SerializeField] List<Row> chessBoardBoxes = null;
     [SerializeField] CHESSPIECESO[] chessPieceSO = null;
     [SerializeField] string fen = null;
@@ -36,26 +39,35 @@ public class CHESSBOARD : MonoBehaviour
 
         UpdateCastlingRights();
         FenGenerator();
-
-        HighlightLegalPieces();
+        stockFish.SetPosition(fen);
+        GetAndHighlightLegalMoves();
     }
     public void NextPlayerTurn() 
     {
-        if (playerToPlay == ChessPieceColor.Black) fullMove++;
-        playerToPlay =playerToPlay==ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
-        FenGenerator();
+        //if (playerToPlay == ChessPieceColor.Black) fullMove++;
+        //playerToPlay =playerToPlay==ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
+        //FenGenerator();
+        GetAndHighlightLegalMoves();
     }
-    async void HighlightLegalPieces()
+    public void HighlightPositions(bool state, List<Vector2Int> positions)
     {
-        //var legalPieces = stockFish.GetPiecesWithLegalMoves(fen);
-        var positions = await stockFish.GetPiecesWithLegalMoves(fen);
-        print(stockFish.GetLegalMovesForPiece(fen, new Vector2Int(6,0)));
+
         foreach (Vector2Int move in positions)
         {
             //print(move.x+""+move.y);
-            chessBoardBoxes[move.x].columns[move.y].ToggleHighlighter(true);
+            chessBoardBoxes[move.x].columns[move.y].ToggleHighlighter(state);
+
         }
     }
+    public void HighlightPositions(bool state,List<ChessMove> postions) 
+    {
+        foreach(ChessMove chessmove in postions) 
+        {
+           var move = chessmove.GetToNotation();
+           chessBoardBoxes[move.x].columns[move.y].ToggleHighlighter(state);
+        }
+    }
+
     public GameObject GetPiecePrefab(int pieceIndex,int colorIndex)
     {
         if (pieceIndex < chessPieceSO.Length) 
@@ -114,15 +126,68 @@ public class CHESSBOARD : MonoBehaviour
 //   await stockFish.GetLegalMoves(fen);
 //}
 
-public void PiecePlaced() 
+    public void PiecePlaced() 
     {
-        //FenGenerator();
+        
     }
     public void PieceGrabbed(string position) 
     {
-        //var pos = stockFish.GetLegalMovesForPiece(fen, position);
-        //print(pos);
+     // HighlightLegalPieces(true);
     }
+    //public async void HighLightLegalMovesForAPiece(string position) 
+    //{
+    //  //  List<ChessMove> chessMoves= await stockFish.GetFullLegalMovesForPiece(fen, position);
+
+    public List<Vector2Int> GetLegalMoves()
+    {
+        return legalPieces;
+    }
+    //}
+    public void HighlightlegalPieces()
+    {
+        stockFish.GetPiecesWithLegalMoves().ContinueWith(task =>
+        {
+            if (task.IsCompletedSuccessfully)
+            {
+                legalPieces = task.Result;
+                // Additional code to use legalPieces here
+            }
+            else
+            {
+                Debug.LogError("Failed to get legal pieces: " + task.Exception);
+            }
+        }, TaskScheduler.FromCurrentSynchronizationContext());
+    }
+    public void GetAndHighlightLegalMoves()
+    {
+        StartCoroutine(GetLegalMovesCoroutine());
+    }
+
+    private IEnumerator GetLegalMovesCoroutine()
+    {
+        // Create a task to get the legal moves
+        Task<List<Vector2Int>> legalMovesTask = stockFish.GetPiecesWithLegalMoves();
+
+        // Wait for the task to complete
+        while (!legalMovesTask.IsCompleted)
+        {
+            yield return null;
+        }
+
+        // Check if the task completed successfully
+        if (legalMovesTask.Status == TaskStatus.RanToCompletion)
+        {
+            // Get the result and pass it to the highlight function
+            legalPieces = legalMovesTask.Result;
+            HighlightPositions(true,legalPieces);
+        }
+        else
+        {
+            Debug.LogError("Failed to get legal moves: " +
+                (legalMovesTask.Exception != null ? legalMovesTask.Exception.Message : "Unknown error"));
+        }
+    }
+
     public void UpdateMovementFlag(string flag)
     {
         movementFlags[flag] = true;

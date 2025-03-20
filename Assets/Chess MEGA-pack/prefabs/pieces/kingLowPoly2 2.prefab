@@ -48,12 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2cd7b95b1b1ce41b3df6871eb2eb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chessBoard: {fileID: 0}
+  stockFish: {fileID: 0}
+  interactable: {fileID: 0}
+  LegalMoves: []
   castlingPiece: 0
   prevPosition: 
   currentPosition: 
   totalSteps: 0
   isTriggered: 0
-  chessBoard: {fileID: 0}
 --- !u!65 &6348307787569057443
 BoxCollider:
   m_ObjectHideFlags: 0

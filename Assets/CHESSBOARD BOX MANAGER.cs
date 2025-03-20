@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CHESSBOARDBOXMANAGER : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
     public PIECEMANAGER pieceInstance = null;
     private void Start()
     {
+
         highlighter = GetComponent<Highlighter>();
         SpawnPiece();
     }
@@ -22,24 +24,31 @@ public class CHESSBOARDBOXMANAGER : MonoBehaviour
         GameObject prefab = chessBoard.GetPiecePrefab((int)chessPieceType, (int)pieceColor);
         pieceInstance = Instantiate(prefab,transform.position,Quaternion.identity,transform).GetComponent<PIECEMANAGER>();
         SetupPieceManager();
+        pieceInstance.ToggleDefaultLayer(true);
     }
+
     public void ToggleHighlighter(bool state) 
     {
         highlighter.enabled = state;
+        if (pieceInstance == null) return;
+        //pieceInstance.ToggleDefaultLayer(state);
     }
-    public void PiecePlaced() 
+    public void PiecePlaced(SelectEnterEventArgs args) 
     {
-        print(this.name);
-        chessBoard.PiecePlaced();
+        pieceInstance = args.interactableObject.transform.GetComponent<PIECEMANAGER>();
+        pieceInstance.piecePlaced(this);
     }
     public void PieceGrabbed() 
     {
-        print("Exited");
-        chessBoard.PieceGrabbed(this.name);
+        StartCoroutine( pieceInstance.PieceGrabbed());
+    }
+    public void UpdatePieceInstance() 
+    {
+        pieceInstance = null;
     }
     public void SetupPieceManager() 
     {
-        pieceInstance.SetUpPiece(castlingPiece,this.name);
+        pieceInstance.SetUpPiece(castlingPiece,this);
     }
     public (ChessPieceType,ChessPieceColor) GetPieceData() 
     {

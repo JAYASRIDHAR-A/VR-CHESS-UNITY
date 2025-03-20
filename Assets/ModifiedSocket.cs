@@ -12,7 +12,7 @@ public class ModifiedSocket : XRSocketInteractor
         chessBoardBoxManager = GetComponent<CHESSBOARDBOXMANAGER>();
         attachTransform = transform.GetChild(0);
         base.Awake();
-        selectEntered.AddListener(args => chessBoardBoxManager.PiecePlaced());
+        selectEntered.AddListener(args => chessBoardBoxManager.PiecePlaced( args));
         selectExited.AddListener(args => chessBoardBoxManager.PieceGrabbed());
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
