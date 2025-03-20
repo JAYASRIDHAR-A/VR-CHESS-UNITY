@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 [ExecuteInEditMode]
 public class DebugSerializedProperties : MonoBehaviour
@@ -12,7 +12,7 @@ public class DebugSerializedProperties : MonoBehaviour
 
     private void DebugSerializedPropertiesOfXRSocketInteractor()
     {
-        XRSocketInteractor socketInteractor = GetComponent<XRSocketInteractor>();
+        UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socketInteractor = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
         if (socketInteractor == null)
         {
             Debug.LogWarning("No XRSocketInteractor component found on this GameObject.");

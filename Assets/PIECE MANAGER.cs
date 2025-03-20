@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class PIECEMANAGER : MonoBehaviour
 {
     [SerializeField] CHESSBOARD chessBoard = null;
     [SerializeField] StockFish stockFish = null; 
-    [SerializeField] XRGrabInteractable interactable = null;
+    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable = null;
     [SerializeField] List<ChessMove> LegalMoves = null;
     [SerializeField] CastlingPiecePosition castlingPiece = CastlingPiecePosition.None;
     [SerializeField] CHESSBOARDBOXMANAGER prevPosition = null;
@@ -21,7 +21,7 @@ public class PIECEMANAGER : MonoBehaviour
     {
         chessBoard = FindAnyObjectByType<CHESSBOARD>();
         stockFish = FindAnyObjectByType<StockFish>();
-        interactable = GetComponent<XRGrabInteractable>();
+        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
     }
     public void SetUpPiece(CastlingPiecePosition castlingPieceEnum,CHESSBOARDBOXMANAGER position)
     {
@@ -59,7 +59,7 @@ public class PIECEMANAGER : MonoBehaviour
     }
     public void ToggleDefaultLayer(bool includeDefault)
     {
-        var interactable = GetComponent<XRGrabInteractable>();
+        var interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         int defaultLayerValue = 1 << LayerMask.NameToLayer("Default");
 
         if (includeDefault)

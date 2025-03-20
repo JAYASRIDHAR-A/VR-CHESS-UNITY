@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ModifiedSocket : XRSocketInteractor
+public class ModifiedSocket : UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor
 {
     [SerializeField] CHESSBOARDBOXMANAGER chessBoardBoxManager = null;
     [SerializeField] int eventCount = 0;
