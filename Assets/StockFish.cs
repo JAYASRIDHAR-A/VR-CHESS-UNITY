@@ -157,24 +157,16 @@ public class StockFish : MonoBehaviour
         var positions = ParsePerftOutput(response);
         UnityEngine.Debug.Log($"Pieces with legal moves: {string.Join(", ", positions)}");
 
-        // Convert HashSet to List before returning
         return new List<UnityEngine.Vector2Int>(positions);
     }
 
-    // Get legal moves for a specific piece as destination squares
-    public async Task<string[]> GetLegalMovesForPiece(string squareNotation)
+
+
+
+    // Parse perft output to get destination squares as Vector2Int for a specific piece
+    private List<Vector2Int> ParsePerftOutputForPiece(string response, string squareNotation)
     {
-        SendCommand("go perft 1");
-
-        string response = await WaitForResponse();
-        if (string.IsNullOrEmpty(response))
-        {
-            UnityEngine.Debug.LogWarning("No response received from Stockfish.");
-            return new string[0];
-        }
-
-        // Parse only moves that start with the specified position
-        List<string> destinationSquares = new List<string>();
+        List<Vector2Int> destinationSquares = new List<Vector2Int>();
         string[] lines = response.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
         foreach (string line in lines)
@@ -184,21 +176,20 @@ public class StockFish : MonoBehaviour
                 string moveText = line.Split(':')[0].Trim(); // e.g., "a2a3"
 
                 // Check if this move starts with our target square
-                if (moveText.StartsWith(squareNotation) && moveText.Length >= 4)
+                if (moveText.StartsWith(squareNotation.ToLower()) && moveText.Length >= 4)
                 {
                     // Extract destination square
                     string toSquare = moveText.Substring(2, 2);   // e.g., "a3"
-                    destinationSquares.Add(toSquare);
+                    destinationSquares.Add(ConvertTo2DPosition(toSquare));
                 }
             }
         }
 
-        UnityEngine.Debug.Log($"Legal moves for piece at {squareNotation}: {string.Join(", ", destinationSquares)}");
-        return destinationSquares.ToArray();
+        return destinationSquares;
     }
 
-    // Get full move information for a specific piece
-    public async Task<List<ChessMove>> GetFullLegalMovesForPiece(string squareNotation)
+    // Then update GetFullLegalMovesForPiece to use this new method
+    public async Task<List<Vector2Int>> GetFullLegalMovesForPiece(string squareNotation)
     {
         SendCommand("go perft 1");
 
@@ -206,16 +197,15 @@ public class StockFish : MonoBehaviour
         if (string.IsNullOrEmpty(response))
         {
             UnityEngine.Debug.LogWarning("No response received from Stockfish.");
-            return new List<ChessMove>();
+            return new List<Vector2Int>();
         }
 
         // Parse only moves that start with the specified position
-        List<ChessMove> legalMoves = ParseMovesForSquare(response, squareNotation);
+        List<Vector2Int> legalMoves = ParsePerftOutputForPiece(response, squareNotation);
         UnityEngine.Debug.Log($"Legal moves for piece at {squareNotation}: {string.Join(", ", legalMoves)}");
 
         return legalMoves;
     }
-
     // Check if a king is in check
     public async Task<bool> IsInCheck()
     {
@@ -233,7 +223,8 @@ public class StockFish : MonoBehaviour
     }
 
     // Get the best move from Stockfish
-    public async Task<ChessMove> GetBestMove(int depth = 12)
+    // Get just the destination square of the best move
+    public async Task<List<Vector2Int>> GetBestMoveDestination(int depth = 12)
     {
         SendCommand($"go depth {depth}");
 
@@ -241,7 +232,7 @@ public class StockFish : MonoBehaviour
         if (string.IsNullOrEmpty(response))
         {
             UnityEngine.Debug.LogWarning("No response received from Stockfish.");
-            return null;
+            return  null; // Invalid position to indicate error
         }
 
         // Parse to find the best move line
@@ -262,98 +253,16 @@ public class StockFish : MonoBehaviour
             return null;
         }
 
-        // Parse the move into a ChessMove object
-        string fromSquare = bestMove.Substring(0, 2);
-        string toSquare = bestMove.Substring(2, 2);
-
-        ChessMove move = new ChessMove
-        {
-            From = ConvertTo2DPosition(fromSquare),
-            To = ConvertTo2DPosition(toSquare),
-            FromNotation = fromSquare,
-            ToNotation = toSquare
-        };
-
-        // Handle promotion if present
-        if (bestMove.Length > 4)
-        {
-            move.Promotion = bestMove[4];
-        }
-
-        // Get current FEN to check for special moves
-        string currentFenString = await GetCurrentFen();
-
-        // Check for special moves
-        if (IsCastling(fromSquare, toSquare))
-        {
-            move.IsCastling = true;
-        }
-
-        if (IsEnPassant(currentFenString, fromSquare, toSquare))
-        {
-            move.IsEnPassant = true;
-        }
-
-        return move;
+        // Parse just the destination square
+        print(bestMove);
+        List<Vector2Int> positions = new List<Vector2Int>();
+        positions.Add(ConvertTo2DPosition(bestMove.Substring(0, 2)));
+        positions.Add(ConvertTo2DPosition(bestMove.Substring(2, 2)));
+        //string toSquare = bestMove.Substring(2, 2);
+        return positions;
     }
 
-    // Parse only moves that start with the specified square
-    private List<ChessMove> ParseMovesForSquare(string response, string startSquare)
-    {
-        List<ChessMove> moves = new List<ChessMove>();
-        string[] lines = response.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
-        foreach (string line in lines)
-        {
-            if (line.Contains(":"))
-            {
-                string moveText = line.Split(':')[0].Trim(); // e.g., "a2a3"
-
-                // Check if this move starts with our target square
-                if (moveText.StartsWith(startSquare) && moveText.Length >= 4)
-                {
-                    // Parse the move
-                    string fromSquare = moveText.Substring(0, 2); // e.g., "a2"
-                    string toSquare = moveText.Substring(2, 2);   // e.g., "a3"
-
-                    // Check if it's a promotion move
-                    char? promotion = null;
-                    if (moveText.Length > 4)
-                    {
-                        promotion = moveText[4];
-                    }
-
-                    // Create a ChessMove object
-                    ChessMove move = new ChessMove
-                    {
-                        From = ConvertTo2DPosition(fromSquare),
-                        To = ConvertTo2DPosition(toSquare),
-                        FromNotation = fromSquare,
-                        ToNotation = toSquare,
-                        Promotion = promotion
-                    };
-
-                    // Check for special moves
-                    if (IsCastling(fromSquare, toSquare))
-                    {
-                        move.IsCastling = true;
-                    }
-
-                    // Check for en passant
-                    if (IsPawnMove(fromSquare, toSquare) &&
-                        Math.Abs(fromSquare[0] - toSquare[0]) == 1 &&
-                        Math.Abs(fromSquare[1] - toSquare[1]) == 1)
-                    {
-                        move.IsEnPassant = true;
-                    }
-
-                    moves.Add(move);
-                }
-            }
-        }
-        print(moves);
-        return moves;
-    }
 
     // Check if a move is a pawn move
     private bool IsPawnMove(string from, string to)

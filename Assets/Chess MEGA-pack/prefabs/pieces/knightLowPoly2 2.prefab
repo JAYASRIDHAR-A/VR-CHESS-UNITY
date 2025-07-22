@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -6025255753478998074}
   - component: {fileID: -3984575651559835702}
   - component: {fileID: -2623816141668186728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knightLowPoly2 2
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +53,8 @@ MonoBehaviour:
   interactable: {fileID: 0}
   LegalMoves: []
   castlingPiece: 0
-  prevPosition: 
-  currentPosition: 
+  prevPosition: {fileID: 0}
+  currentPosition: {fileID: 0}
   totalSteps: 0
   isTriggered: 0
 --- !u!65 &-6025255753478998074
@@ -119,9 +119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 2
   m_DistanceCalculationMode: 1
@@ -180,33 +177,6 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
@@ -253,10 +223,10 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
 --- !u!1 &6996821189285354948
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +238,7 @@ GameObject:
   - component: {fileID: 9105866796383040170}
   - component: {fileID: 1640482279909834576}
   - component: {fileID: 2936761274982905153}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knightLowPoly2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,6 +285,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

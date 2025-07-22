@@ -22,8 +22,8 @@ public class Highlighter : MonoBehaviour
 
             for (int i = 0; i < originalMaterials.Length; i++)
             {
-                // Create a new material for highlighting based on the original material.
-                highlightMaterials[i] = new Material(originalMaterials[i]);
+                // Create a new material using the URP Lit shader.
+                highlightMaterials[i] = new Material(Shader.Find("Universal Render Pipeline/Lit"));
                 highlightMaterials[i].color = highlightColor; // Apply the highlight color.
             }
         }
@@ -35,9 +35,9 @@ public class Highlighter : MonoBehaviour
 
     void OnEnable()
     {
-        print(objectRenderer.materials.Length + this.name);
+        print(objectRenderer.materials.Length + " " + this.name);
         // Apply the highlight materials when the script is enabled.
-        if (objectRenderer != null)
+        if (objectRenderer != null && highlightMaterials != null)
         {
             objectRenderer.materials = highlightMaterials; // Set the new highlighted materials.
         }
@@ -46,7 +46,7 @@ public class Highlighter : MonoBehaviour
     void OnDisable()
     {
         // Revert back to the original materials when the script is disabled.
-        if (objectRenderer != null)
+        if (objectRenderer != null && originalMaterials != null)
         {
             objectRenderer.materials = originalMaterials; // Restore the original materials.
         }

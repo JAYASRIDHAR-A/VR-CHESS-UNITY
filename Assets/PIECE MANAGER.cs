@@ -9,13 +9,12 @@ public class PIECEMANAGER : MonoBehaviour
     [SerializeField] CHESSBOARD chessBoard = null;
     [SerializeField] StockFish stockFish = null; 
     [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactable = null;
-    [SerializeField] List<ChessMove> LegalMoves = null;
+    [SerializeField] List<Vector2Int> LegalMoves = null;
     [SerializeField] CastlingPiecePosition castlingPiece = CastlingPiecePosition.None;
     [SerializeField] CHESSBOARDBOXMANAGER prevPosition = null;
-    [SerializeField] CHESSBOARDBOXMANAGER currentPosition = null;
+    [SerializeField] public CHESSBOARDBOXMANAGER currentPosition = null;
     [SerializeField] int totalSteps = 0;
     [SerializeField] bool isTriggered = false;
-
 
     private void Start()
     {
@@ -42,20 +41,26 @@ public class PIECEMANAGER : MonoBehaviour
     //}
     public IEnumerator PieceGrabbed()
     {
+        print("Grabbed");
         var task = stockFish.GetFullLegalMovesForPiece(currentPosition.gameObject.name);
-        print("test" + stockFish.GetLegalMovesForPiece(currentPosition.gameObject.name));
+     // print("test" + stockFish.GetFullLegalMovesForPiece(currentPosition.gameObject.name));
         yield return new WaitUntil(() => task.IsCompleted);
         LegalMoves = task.Result;
-        chessBoard.HighlightPositions(false, chessBoard.GetLegalMoves());
-        chessBoard.HighlightPositions(true, LegalMoves);
+        chessBoard.HighlightPositions(this.name,false, chessBoard.GetLegalMoves());
+        print(LegalMoves);
+        chessBoard.HighlightPositions(this.name, true, LegalMoves);
         // rest of your code
     }
     public void piecePlaced(CHESSBOARDBOXMANAGER position) 
     {
+        print("placed");
         UpdatePieceData(position);
-        chessBoard.HighlightPositions(false, LegalMoves);
+        print(LegalMoves);
+        chessBoard.HighlightPositions(this.name,false, LegalMoves);
         stockFish.MakeMove(prevPosition.gameObject.name+currentPosition.gameObject.name);
-        chessBoard.NextPlayerTurn();
+       StartCoroutine( chessBoard. AIMove());
+       // chessBoard.NextPlayerTurn();
+
     }
     public void ToggleDefaultLayer(bool includeDefault)
     {

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -3406201294532935965}
   - component: {fileID: -4261596799714157897}
   - component: {fileID: -5214433717848693347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pawnLowPoly2 3
-  m_TagString: Untagged
+  m_TagString: Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +53,8 @@ MonoBehaviour:
   interactable: {fileID: 0}
   LegalMoves: []
   castlingPiece: 0
-  prevPosition: 
-  currentPosition: 
+  prevPosition: {fileID: 0}
+  currentPosition: {fileID: 0}
   totalSteps: 0
   isTriggered: 0
 --- !u!65 &-3406201294532935965
@@ -119,9 +119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_InteractionLayers:
     m_Bits: 2
   m_DistanceCalculationMode: 1
@@ -180,33 +177,6 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
@@ -253,10 +223,10 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
-  m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
 --- !u!1 &4924662455828111944
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +238,7 @@ GameObject:
   - component: {fileID: 4894660922889810847}
   - component: {fileID: 6893482496579861585}
   - component: {fileID: 2010463610977000232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pawnLowPoly2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,6 +285,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

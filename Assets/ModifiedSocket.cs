@@ -7,6 +7,7 @@ public class ModifiedSocket : UnityEngine.XR.Interaction.Toolkit.Interactors.XRS
 {
     [SerializeField] CHESSBOARDBOXMANAGER chessBoardBoxManager = null;
     [SerializeField] int eventCount = 0;
+    [SerializeField] public bool CanActivate = true;
     protected override void Awake()
     {
         chessBoardBoxManager = GetComponent<CHESSBOARDBOXMANAGER>();
@@ -17,8 +18,9 @@ public class ModifiedSocket : UnityEngine.XR.Interaction.Toolkit.Interactors.XRS
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        if (eventCount > 1)
+        if (eventCount > 1&&CanActivate)
         {
+            print(this.name);
             //chessBoardBoxManager.PiecePlaced();
             base.OnSelectEntered(args);
         }
@@ -28,8 +30,11 @@ public class ModifiedSocket : UnityEngine.XR.Interaction.Toolkit.Interactors.XRS
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
+        if (CanActivate)
+        {
+            print(this.name);
             //chessBoardBoxManager.PieceGrabbed();
             base.OnSelectExited(args);
-
+        }
     }
 }

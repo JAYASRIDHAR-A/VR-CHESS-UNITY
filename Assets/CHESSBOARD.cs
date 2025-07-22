@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class Row
@@ -40,7 +44,8 @@ public class CHESSBOARD : MonoBehaviour
         UpdateCastlingRights();
         FenGenerator();
         stockFish.SetPosition(fen);
-        GetAndHighlightLegalMoves();
+        StartCoroutine(AIMove());
+       // GetAndHighlightLegalMoves();
     }
     public void NextPlayerTurn() 
     {
@@ -49,9 +54,118 @@ public class CHESSBOARD : MonoBehaviour
         //FenGenerator();
         GetAndHighlightLegalMoves();
     }
-    public void HighlightPositions(bool state, List<Vector2Int> positions)
+    public IEnumerator AIMove()
     {
+        // Get the best move from Stockfish
+        var task = stockFish.GetBestMoveDestination();
+        yield return new WaitUntil(() => task.IsCompleted);
+        var bestMove = task.Result;
 
+        if (bestMove == null || bestMove.Count < 2)
+        {
+            Debug.LogError("Invalid move received from Stockfish");
+            yield break;
+        }
+
+        print($"pos from: ({bestMove[0].x},{bestMove[0].y}) to: ({bestMove[1].x},{bestMove[1].y})");
+
+        // Get the piece manager at the source position
+        PIECEMANAGER sourcePiece = chessBoardBoxes[bestMove[0].x].columns[bestMove[0].y].pieceInstance;
+
+        if (sourcePiece == null)
+        {
+            Debug.LogError("No piece found at source position");
+            yield break;
+        }
+
+        // Get references to the source and target positions
+        Transform sourcePosition = chessBoardBoxes[bestMove[0].x].columns[bestMove[0].y].transform;
+        Transform targetPosition = chessBoardBoxes[bestMove[1].x].columns[bestMove[1].y].transform;
+
+        // Get the socket interactors
+        ModifiedSocket sourceSocket = sourcePosition.GetComponent<ModifiedSocket>();
+        ModifiedSocket targetSocket = targetPosition.GetComponent<ModifiedSocket>();
+        sourceSocket.CanActivate = false;
+        targetSocket.CanActivate = false;
+
+
+        if (sourceSocket != null && targetSocket != null)
+        {
+            // Get the interactable component from the piece
+            XRGrabInteractable interactable = sourcePiece.GetComponent<XRGrabInteractable>();
+
+            if (interactable == null)
+            {
+                // Try to find it in children if not on the main object
+                interactable = sourcePiece.GetComponentInChildren<XRGrabInteractable>();
+            }
+
+            if (interactable != null)
+            {
+                // Get the interaction manager
+                XRInteractionManager interactionManager = sourceSocket.interactionManager;
+
+                // Check if there's a piece at the target that needs to be captured
+                PIECEMANAGER targetPiece = chessBoardBoxes[bestMove[1].x].columns[bestMove[1].y].pieceInstance;
+
+                // Handle capture logic if needed
+                if (targetPiece != null)
+                {
+                    // Remove the target piece from the board (capture logic)
+                    XRGrabInteractable targetInteractable = targetPiece.GetComponent<XRGrabInteractable>();
+                    if (targetInteractable != null)
+                    {
+                        // Use the new API with proper casting
+                        interactionManager.SelectExit((IXRSelectInteractor)targetSocket, (IXRSelectInteractable)targetInteractable);
+                        // Handle capture (e.g., move to a "captured pieces" area or deactivate)
+                        Destroy(targetPiece.gameObject);
+                    }
+
+                    // Update the board data structure
+                    chessBoardBoxes[bestMove[1].x].columns[bestMove[1].y].pieceInstance = null;
+                }
+
+                // Detach from current socket using the new API with proper casting
+                interactionManager.SelectExit((IXRSelectInteractor)sourceSocket, (IXRSelectInteractable)interactable);
+
+                // Wait a frame
+                yield return null;
+                
+                // Move the piece to the target position
+                sourcePiece.transform.position = targetSocket.attachTransform != null ?
+                    targetSocket.attachTransform.position : targetSocket.transform.position;
+
+                // Attach to the new socket using the new API with proper casting
+                interactionManager.SelectEnter((IXRSelectInteractor)targetSocket, (IXRSelectInteractable)interactable);
+
+                // Update the board data structure
+                //chessBoardBoxes[bestMove[1].x].columns[bestMove[1].y].pieceInstance = sourcePiece;
+                //chessBoardBoxes[bestMove[0].x].columns[bestMove[0].y].pieceInstance = null;
+
+                // Wait for the attachment to complete
+                yield return null;
+            }
+            else
+            {
+                Debug.LogError("No XRGrabInteractable found on piece");
+            }
+           // print(sourcePiece.name);
+            
+
+        }
+        sourceSocket.CanActivate = true;
+        targetSocket.CanActivate = true;
+       // print("Target Notation"+targetSocket.name);
+        stockFish.MakeMove(sourceSocket.name+ targetSocket.name);
+        NextPlayerTurn();
+    }
+    public void HighlightPositions(string name,bool state, List<Vector2Int> positions)
+    {
+       // print(name);
+        //foreach (var position in positions) 
+        //{
+        //    print(position);
+        //}
         foreach (Vector2Int move in positions)
         {
             //print(move.x+""+move.y);
@@ -61,6 +175,7 @@ public class CHESSBOARD : MonoBehaviour
     }
     public void HighlightPositions(bool state,List<ChessMove> postions) 
     {
+        print(postions);
         foreach(ChessMove chessmove in postions) 
         {
            var move = chessmove.GetToNotation();
@@ -179,7 +294,8 @@ public class CHESSBOARD : MonoBehaviour
         {
             // Get the result and pass it to the highlight function
             legalPieces = legalMovesTask.Result;
-            HighlightPositions(true,legalPieces);
+            HighlightPositions(this.name,true,legalPieces);
+            print("LegalMoves");
         }
         else
         {
@@ -229,4 +345,6 @@ public class CHESSBOARD : MonoBehaviour
             _ => ""
         };
     }
+
+
 }
